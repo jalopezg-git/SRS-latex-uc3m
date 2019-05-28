@@ -146,7 +146,7 @@
   % <OPTIONS> may include values for [io]_offset=N (skip N items/origins),
   % and [io]_count=N (number of items/origins to typeset).
   %
-  % e.g.: `\traceabilityPrintMatrix{F\37-SR}{CA\37-UR}{i_offset=0,i_count=24}'
+  % e.g.: `\traceabilityPrintMatrix{^F\37-SR}{^CA\37-UR}{i_offset=0,i_count=24}'
   %
   %       Generates a matrix that correlates items that have prefix 'F-SR' to
   %       those that start with 'CA-UR'.
@@ -232,7 +232,7 @@
 %        \end{component}
 \newenvironment{component}[6]
                {\traceability@addOrigins{#1}{#6}
-                 \def\@@component@data{#4}\def@@component@resources{#5}
+                 \def\@@component@data{#4}\def\@@component@resources{#5}
                  \def\@@component@origin{#6}
                  \begin{baseComponent}{#1}{#2}{#3}
                    \@component@description & }
